@@ -5,6 +5,7 @@ function timeObject(str) {
   if (isNaN(str)) {
 
     unix = Date.parse(str);
+    var isNatural = true;
   }
   else {
     unix = parseInt(str)
@@ -38,7 +39,12 @@ function timeObject(str) {
     month[10] = "November";
     month[11] = "December";
 
-    obj.unix = unix / (1000);
+    if (isNatural) {
+      obj.unix = unix / (1000);
+    }
+    else {
+      obj.unix = unix
+    }
     obj.natural = month[date.getUTCMonth()] + " " + date.getUTCDate() + ", " + date.getUTCFullYear();
 
     return obj;
