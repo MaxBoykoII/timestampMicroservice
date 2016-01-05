@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Timestamp Microservice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+
+
+</head>
+
+<body>
+  <h1> Timestamp Microservice</h1>
+  <p> This microservice accepts a string as a parameter and checks whether it is a unix timestamp or a natural language date. If it is, the microservice returns both the unix timestamp and the natural language date. If not, the microservice returns null for
+    both properties. </p>
+
+  <h2>Example Usage</h2>
+
+  <p>https://timestamp-microservice-2-maxboyko.c9users.io/March 20 2001 <br>
+  https://timestamp-microservice-2-maxboyko.c9users.io/March%2020%202001</p>
+
+  <h2> Example Output </h2>
+  <p> {"unix":985046400,"natural":"March 20, 2001"}</p>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+</body>
+
+</html>
+
+
