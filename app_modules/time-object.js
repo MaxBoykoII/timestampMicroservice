@@ -1,6 +1,15 @@
 function timeObject(str) {
 
-  var unix = Date.parse(str);
+  var unix;
+
+  if (isNaN(str)) {
+
+    unix = Date.parse(str);
+  }
+  else {
+    unix = parseInt(str)
+  }
+
   var obj = {};
   if (!unix) {
 
@@ -38,4 +47,3 @@ function timeObject(str) {
 }
 
 module.exports = timeObject;
-
